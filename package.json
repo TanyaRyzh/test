@@ -4,7 +4,6 @@
   "description": "test task",
   "main": "define-timezone.js",
   "scripts": {
-    "start": "node define-timezone.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
