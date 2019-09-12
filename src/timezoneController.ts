@@ -45,8 +45,6 @@ const getTimezone = async (coords: string) => {
 
 const defineTimezone = async (city: string) => {
     const coords = await getCoords(city);
-     // tslint:disable-next-line:no-console
-    console.log(coords);
     const timezone = await getTimezone(coords);
     return timezone;
 };
