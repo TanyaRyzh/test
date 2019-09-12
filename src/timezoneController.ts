@@ -43,10 +43,8 @@ const getTimezone = async (coords: string) => {
     return response.timeZoneId;
 };
 
-const defineTimezone = async (city: string) => {
+export const defineTimezone = async (city: string) => {
     const coords = await getCoords(city);
     const timezone = await getTimezone(coords);
     return timezone;
 };
-
-export { defineTimezone };
