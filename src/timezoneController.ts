@@ -30,7 +30,7 @@ const getTimezone = async (coords: string) => {
         json: true,
         qs: {
             key: process.env.G_KEY,
-            location: coords.split(" ").join(","),
+            location: coords.split(" ").reverse().join(","),
             timestamp: Math.round(Date.now() / 1000)
         },
         url: G_URL
@@ -45,6 +45,8 @@ const getTimezone = async (coords: string) => {
 
 const defineTimezone = async (city: string) => {
     const coords = await getCoords(city);
+     // tslint:disable-next-line:no-console
+    console.log(coords);
     const timezone = await getTimezone(coords);
     return timezone;
 };
