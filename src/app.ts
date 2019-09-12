@@ -1,6 +1,8 @@
+import { config } from "dotenv";
 import express from "express";
 import { defineTimezone } from "./timezoneController";
 
+config();
 const app = express();
 const port = 8080;
 
